@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medidor de Área Foliar</title>
+</head>
+<body>
+    <h1>Medidor de Área Foliar</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Subir Imagen</button>
+    </form>
+
+    {% if area %}
+        <h2>Área foliar: {{ area }} cm²</h2>
+        <h3>Original:</h3>
+        <img src="{{ original }}" width="400">
+        <h3>Procesado:</h3>
+        <img src="{{ procesado }}" width="400">
+    {% endif %}
+</body>
+</html>
