@@ -1,0 +1,20 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medición de Hoja</title>
+</head>
+<body>
+    <h1>Sube una imagen de hoja</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <button type="submit">Calcular área</button>
+    </form>
+
+    {% if area %}
+        <h2>Área foliar: {{ area }} cm²</h2>
+        <img src="{{ original }}" width="300">
+        <img src="{{ procesado }}" width="300">
+    {% endif %}
+</body>
+</html>
